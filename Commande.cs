@@ -6,25 +6,41 @@ namespace H.E.R.M
 {
     class Commande
     {
-        int Num_Comd;
-        DateTime Date_Comd;
-        public Commande()
+        private int CommandeID_;
+        private DateTime CommandeDate_;
+
+        public int CommandeID
         {
+            get { return this.CommandeID_; }
+            set { this.CommandeID_ = value; }
         }
-        public Commande(int numcomd, DateTime datecomd)
+        public DateTime CommandeDate
         {
-            this.Num_Comd = numcomd;
-            this.Date_Comd = datecomd;
+            get { return this.CommandeDate_; }
+            set { this.CommandeDate_ = value; }
         }
-        public int Num_Comd_
+        public Commande() { }
+        public Commande(int ID, DateTime Date)
         {
-            get {return this.Num_Comd; }
-            set {this.Num_Comd=value; }
+            this.CommandeID = ID;
+            this.CommandeDate = Date;
         }
-        public DateTime Date_Comd_
+
+        public int calculerPrix()
         {
-            get {return this.Date_Comd; }
-            set {this.Date_Comd=value; }
+            //int Prix_Total;
+            //int Prix_Sous_Total;
+            //int Contiter;
+            //
+            return 1;
+        }
+
+        public void afficherCommande()
+        {
+            //
+            System.Console.WriteLine("Commande ID: ");
+            System.Console.WriteLine("Commande Date: ");
+            System.Console.WriteLine("Commande Prix: ");
         }
     }
 
