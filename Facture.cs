@@ -33,13 +33,13 @@ namespace H.E.R.M
             set => telephone = value;
         }
 
-        public Facture(string nom_complet,DateTime date,int telephone)
+        public Facture(string nom_complet, DateTime date, int telephone)
         {
             this.Id = id;
             this.nom_complet = nom_complet;
             this.Date = date;
             this.telephone = telephone;
-        } 
+        }
 
     }
 }

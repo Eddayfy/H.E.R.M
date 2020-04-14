@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace H.E.R.M
 {
-    class Client
+    public class Client
     {
         private string prenom;
         private string nom;
@@ -26,18 +26,13 @@ namespace H.E.R.M
             this.Type = type;
             this.Id = id;
         }
-        public void Afficher_client()
+        static public void Afficher_client()
         {
-            List<string> Nclient = new List<string>() { "Benjeloun", "Tazi", "Berrada", "Rehal", "Bennis", "Qebaj" };
-            List<string> Pclient = new List<string>() { "Ahmed", "Karim", "Samir", "Rayan", "Simo", "Aziz" };
-            List<string> Tclient = new List<string>() { "vrai client", "client normal", "vrai client", "vrai client", "vrai client", "client normal" };
-            List<int> idclient = new List<int>() { 1550, 1551, 1552, 1553, 1554, 1555 };
             Console.WriteLine("Voila nos Clients");
-            for (int i=0;i<Nclient.Count;i++)
+            for (int i = 0; i < Data.clients.Count; i++)
             {
-                Console.WriteLine("\n \t  \t " + (i + 1) + " - " + Nclient[i] + "  " + Pclient[i] + "  " + Tclient[i] + "  " + idclient[i]);
-            }  
-   
+                Console.WriteLine("\n \t  \t " + (i + 1) + " - " + Data.clients[i].Nom + "  " + Data.clients[i].Prenom + "  " + Data.clients[i].Type + "  " + Data.clients[i].Id);
+            }
         }
     }
 

@@ -35,7 +35,7 @@ namespace H.E.R.M
             get { return Prix_Articl; }
             set { Prix_Articl = value; }
         }
-        public int Quantite_Articl_
+                public int Quantite_Articl_
         {
             get { return Quantite_Articl; }
             set { Quantite_Articl = value; }

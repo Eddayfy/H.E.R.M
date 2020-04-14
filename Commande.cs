@@ -6,24 +6,35 @@ namespace H.E.R.M
 {
     class Commande
     {
-        private int CommandeID_;
-        private DateTime CommandeDate_;
+        private int id;
+        static private int nmbridcommande = 0;
+        private DateTime date;
+        private double prix;
 
-        public int CommandeID
+        public int ID
         {
-            get { return this.CommandeID_; }
-            set { this.CommandeID_ = value; }
+            get { return this.id; }
+            set { this.id = value; }
         }
-        public DateTime CommandeDate
+        public DateTime Date
         {
-            get { return this.CommandeDate_; }
-            set { this.CommandeDate_ = value; }
+            get { return this.date; }
+            set { this.date = value; }
         }
-        public Commande() { }
+        public double Prix
+        {
+            get { return this.prix; }
+            set { this.prix = value; }
+        }
+        public Commande()
+        {
+            ID += (nmbridcommande + 1);
+            Date = DateTime.Now;
+        }
         public Commande(int ID, DateTime Date)
         {
-            this.CommandeID = ID;
-            this.CommandeDate = Date;
+            this.ID = ID;
+            this.Date = Date;
         }
 
         public int calculerPrix()
@@ -38,9 +49,42 @@ namespace H.E.R.M
         public void afficherCommande()
         {
             //
-            System.Console.WriteLine("Commande ID: ");
-            System.Console.WriteLine("Commande Date: ");
-            System.Console.WriteLine("Commande Prix: ");
+            System.Console.WriteLine("Commande ID: " + ID);
+            System.Console.WriteLine("Commande Date: " + Date);
+            //System.Console.WriteLine("Commande Prix: " + Co);
+        }
+
+        public void DemmandeCommande()
+        {
+            Articl Ar = new Articl();
+            Console.WriteLine("Voilà Les Article Que Nous avons Vende ici:");
+            Console.WriteLine("1 - Pneu.");
+            Console.WriteLine("2 - Moteur.");
+            Console.WriteLine("3 - Huile.");
+            Console.Write("Votre Choix: ");
+            int choix = int.Parse(Console.ReadLine());
+
+        menu:
+            if (choix == 1)
+            {
+                Ar.afficher_Pneu();
+            }
+            else if (choix == 2)
+            {
+                Ar.afficher_Moteur();
+            }
+            else if (choix == 3)
+            {
+                Ar.afficher_Huile();
+            }
+            else
+            {
+                System.Console.WriteLine("Votre choix est incorecte.");
+                System.Console.Write("Votre choix: ");
+                choix = int.Parse(Console.ReadLine());
+                goto menu;
+            }
+
         }
     }
 
