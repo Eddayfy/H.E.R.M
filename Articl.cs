@@ -10,6 +10,8 @@ namespace H.E.R.M
         int ID_Articl;
         double Prix_Articl;
         int Quantite_Articl;
+        public int Choix_I;
+        public int Choix_Q;
         public Articl()
         { }
         public Articl(string nom, int id, double prix, int quantite)
@@ -35,7 +37,7 @@ namespace H.E.R.M
             get { return Prix_Articl; }
             set { Prix_Articl = value; }
         }
-                public int Quantite_Articl_
+        public int Quantite_Articl_
         {
             get { return Quantite_Articl; }
             set { Quantite_Articl = value; }
@@ -55,6 +57,17 @@ namespace H.E.R.M
                 Console.WriteLine("\n\t\t" + (i + 1) + " - " + Pneu_[i].Nom_Articl + " Numéro " + Pneu_[i].ID_Articl + " à partir de " + Pneu_[i].Prix_Articl + ".00 DH ");
 
             }
+            int a;
+            do
+            {
+                Console.Write("\nDonnez numéro  d'Articl Que Vous Achèterez : ");
+                a = int.Parse(Console.ReadLine());
+                if (a == 1) { Choix_I = 347501; Choix_Q = 100000; }
+                else if (a == 2) { Choix_I = 354020; Choix_Q = 100000; }
+                else if (a == 3) { Choix_I = 401275; Choix_Q = 100000; }
+                else if (a == 4) { Choix_I = 164020; Choix_Q = 100000; }
+                else if (a == 5) { Choix_I = 701540; Choix_Q = 100000; }
+            } while (a != 1 && a != 2 && a != 3 && a != 4 && a != 5);
         }
         public void afficher_Moteur()
         {
@@ -66,27 +79,63 @@ namespace H.E.R.M
             Console.WriteLine("Voilà Les Moteur Que Vous Vendons");
             for (int i = 0; i < Moteur_.Count; i++)
             {
-
                 Console.WriteLine("\n\t\t" + (i + 1) + " - " + Moteur_[i].Nom_Articl + " Numéro " + Moteur_[i].ID_Articl + " à partir de " + Moteur_[i].Prix_Articl + ".00 DH ");
-
             }
+            int a;
+            do
+            {
+                Console.Write("\nDonnez numéro  d'Articl Que Vous Achèterez : ");
+                a = int.Parse(Console.ReadLine());
+                if (a == 1) { Choix_I = 347502; Choix_Q = 100000; }
+                else if (a == 2) { Choix_I = 354021; Choix_Q = 100000; }
+                else if (a == 3) { Choix_I = 401276; Choix_Q = 100000; }
+                else if (a == 4) { Choix_I = 164021; Choix_Q = 100000; }
+            } while (a != 1 && a != 2 && a != 3 && a != 4 );
         }
         public void afficher_Huile()
         {
             List<Articl> Huile_ = new List<Articl>();
-            Huile_.Add(new Articl { Nom_Articl = "Fleet Master", ID_Articl = 347503, Prix_Articl = 100.00, Quantite_Articl = 100000 });
-            Huile_.Add(new Articl { Nom_Articl = "Ultras7", ID_Articl = 384022, Prix_Articl = 70.00, Quantite_Articl = 100000 });
-            Huile_.Add(new Articl { Nom_Articl = "GerBox", ID_Articl = 461277, Prix_Articl = 150.00, Quantite_Articl = 100000 });
-            Huile_.Add(new Articl { Nom_Articl = "HD3", ID_Articl = 164222, Prix_Articl = 100.00, Quantite_Articl = 100000 });
-            Huile_.Add(new Articl { Nom_Articl = "Deux Ton", ID_Articl = 164422, Prix_Articl = 100.00, Quantite_Articl = 100000 });
+            Huile_.Add(new Articl { Nom_Articl = "Fleet Master", ID_Articl = 347503, Prix_Articl = 100, Quantite_Articl = 100000 });
+            Huile_.Add(new Articl { Nom_Articl = "Ultras7", ID_Articl = 384022, Prix_Articl = 70, Quantite_Articl = 100000 });
+            Huile_.Add(new Articl { Nom_Articl = "GerBox", ID_Articl = 461277, Prix_Articl = 150, Quantite_Articl = 100000 });
+            Huile_.Add(new Articl { Nom_Articl = "HD3", ID_Articl = 164222, Prix_Articl = 100, Quantite_Articl = 100000 });
+            Huile_.Add(new Articl { Nom_Articl = "Deux Ton", ID_Articl = 164422, Prix_Articl = 100, Quantite_Articl = 100000 });
             Console.WriteLine("Voilà Les Huile Que Vous Vendons");
             for (int i = 0; i < Huile_.Count; i++)
             {
-
-                Console.WriteLine("\n\t\t" + (i + 1) + " - " + Huile_[i].Nom_Articl + " Numéro " + Huile_[i].ID_Articl + " à partir de " + Huile_[i].Prix_Articl + ".00 DH ");
-
+                Console.WriteLine("\n\t\t" + (i + 1) + " - " + Huile_[i].Nom_Articl + " Numéro " + Huile_[i].ID_Articl + " à partir de " + Huile_[i].Prix_Articl + ".00 DH ");            
             }
+              int a;
+            do
+            {
+                Console.Write("\nDonnez numéro  d'Articl Que Vous Achèterez : ");
+                 a = int.Parse(Console.ReadLine());
+                if (a == 1) { Choix_I = 347503; Choix_Q = 100000; }
+                else if (a == 2) { Choix_I = 384022; Choix_Q = 100000; }
+                else if (a == 3) { Choix_I = 461277; Choix_Q = 100000; }
+                else if (a == 4) { Choix_I = 164222; Choix_Q = 100000; }
+                else if (a == 5) { Choix_I = 164222; Choix_Q = 100000; }
+            } while (a != 1 && a != 2 && a != 3 && a != 4 && a != 5 );
         }
+        public void Choix()
+        {
+            Console.WriteLine("Voilà Les Produit Que Vous Vendons");
+            Console.WriteLine("\n\t\t  1 - Moteur ");
+            Console.WriteLine("\n\t\t  2 - Pneu ");
+            Console.WriteLine("\n\t\t  3 - Huile ");
+            int a;
+            do
+            {
+                Console.Write("\nDonnez Le Produit Que Vous Achèterez : ");
+                a = int.Parse(Console.ReadLine());
+
+                if (a == 1) { Console.WriteLine("\n") ; afficher_Moteur(); }
+                else if (a == 2) { Console.WriteLine("\n"); afficher_Pneu(); }
+                else if (a == 3) { Console.WriteLine("\n"); afficher_Huile(); }
+
+            } while (a !=1 && a != 2 && a != 3);
+        }
+
 
 
     }
