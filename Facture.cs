@@ -4,7 +4,7 @@ using System.Text;
 
 namespace H.E.R.M
 {
-    class Facture
+    public class Facture
     {
         private int Id;
         private string nom_complet;
@@ -33,7 +33,7 @@ namespace H.E.R.M
             set => telephone = value;
         }
 
-        public Facture(string nom_complet, DateTime date, int telephone)
+        public Facture(string nom_complet, DateTime date, int telephone, int id)
         {
             this.Id = id;
             this.nom_complet = nom_complet;
